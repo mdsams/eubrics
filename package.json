@@ -4,7 +4,8 @@
   "description": "eubrics",
   "main": "index.js",
   "engines": {
-    "node": "14.18.0"
+    "node": "14.18.0",
+    "npm": "8.4.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
