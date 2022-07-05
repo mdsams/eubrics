@@ -15,7 +15,7 @@ app.use('/get-behaviours', nameRouter)
 app.use('/task', authentication, taskRouter)
 
 // ** MIDDLEWARE ** //
-const whitelist = ['http://localhost:3000', 'http://localhost:4040', 'https://shrouded-journey-38552.herokuapp.com']
+const whitelist = ['http://localhost:3000', 'http://localhost:3000', 'https://shrouded-journey-38552.herokuapp.com']
 const corsOptions = {
   origin: function ({ origin, callback }: any) {
     console.log("** Origin of request " + origin)
@@ -28,17 +28,19 @@ const corsOptions = {
     }
   }
 }
+app.use(express.static(path.join(__dirname, '../public')));
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, '../public', 'index.html'));
+});
+
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
-  app.use(express.static(path.join(__dirname, 'frontend/build')));
   // Handle React routing, return all requests to React app
-  app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
-  });
+
 }
 
-app.listen(4040, () => console.log("app listening on port 4040"))
+app.listen(3000, () => console.log("app listening on port 3000"))
 
 mongoose.connect("mongodb+srv://shams:Tyuio420@eubrics.kgyzi.mongodb.net/EubricsDatabase?retryWrites=true&w=majority" || '', (err: any) => {
   if (err) {

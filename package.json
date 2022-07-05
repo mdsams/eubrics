@@ -1,27 +1,30 @@
 {
-  "name": "eubrics",
+  "name": "server",
   "version": "1.0.0",
-  "description": "eubrics",
+  "description": "backend of eubricks_client",
   "main": "index.js",
-  "engines": {
-    "node": "14.18.0",
-    "npm": "8.4.0"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:frontend": "npm run start --prefix frontend",
-    "dev:backend": "npm run start --prefix backend",
-    "install:frontend": "npm install --prefix frontend",
-    "install:backend": "npm install --prefix backend",
-    "start": "dev:backend && dev:frontend",
-    "install:all": "npm install npm-run-all && run-p install:backend  install:frontend",
-    "dbscript": "ts-node server/src/dbscript/populateEntries.ts",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
+    "test": "",
+    "start": "nodemon src/index.ts",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
-  "repository": "",
-  "author": "mdsams <tabrejmdsams786@gmail.com>",
-  "license": "MIT",
+  "author": "sucheta mahata",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.2",
+    "path": "^0.12.7",
+    "ts-node": "^10.8.2"
+  },
   "devDependencies": {
-    "npm-run-all": "^4.1.5"
+    "@types/bcrypt": "^5.0.0",
+    "@types/cors": "^2.8.12",
+    "@types/jsonwebtoken": "^8.5.8",
+    "nodemon": "^2.0.18",
+    "typescript": "^4.7.4"
   }
 }
