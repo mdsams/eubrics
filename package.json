@@ -4,12 +4,12 @@
   "description": "backend of eubricks_client",
   "main": "index.js",
   "engines": {
-    "node": "16.x"
+    "node": "14.18.0"
   },
   "scripts": {
     "test": "",
     "start": "nodemon src/index.ts",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "sucheta mahata",
   "license": "ISC",
