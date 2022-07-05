@@ -16,7 +16,7 @@
     "start": "run:all dev:backend  dev:frontend",
     "install:all": "npm install npm-run-all && run-p install:backend  install:frontend",
     "dbscript": "ts-node server/src/dbscript/populateEntries.ts",
-    "heroku-postbuild": "cd frontend && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "repository": "",
   "author": "mdsams <tabrejmdsams786@gmail.com>",
