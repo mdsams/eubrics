@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "backend of eubricks_client",
   "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "test": "",
     "start": "nodemon src/index.ts",
