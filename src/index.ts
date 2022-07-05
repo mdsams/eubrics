@@ -28,13 +28,14 @@ const corsOptions = {
     }
   }
 }
-app.use(express.static(path.join(__dirname, '../public')));
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, '../public', 'index.html'));
-});
+
 
 
 if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../public')));
+  app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public', 'index.html'));
+  });
   // Serve any static files
   // Handle React routing, return all requests to React app
 
