@@ -9,7 +9,7 @@
   "scripts": {
     "test": "",
     "start": "nodemon src/index.ts",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "author": "sucheta mahata",
   "license": "ISC",
