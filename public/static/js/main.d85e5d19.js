@@ -10415,7 +10415,7 @@
                                                                             'http://localhost:5000/user-log-in',
                                                                             {
                                                                                 method: 'POST',
-                                                                                mode: 'cors',
+                                                                                mode: 'no-cors',
                                                                                 body: JSON.stringify(
                                                                                     r,
                                                                                 ),
@@ -10517,7 +10517,7 @@
                                                                             'http://localhost:5000/user-sign-in',
                                                                             {
                                                                                 method: 'POST',
-                                                                                mode: 'cors',
+                                                                                mode: 'no-cors',
                                                                                 body: JSON.stringify(
                                                                                     r,
                                                                                 ),
@@ -10602,7 +10602,7 @@
                                                             (e.next = 3),
                                                             fetch(
                                                                 'http://localhost:5000/get-behaviours',
-                                                                { method: 'GET', mode: 'cors' },
+                                                                { method: 'GET', mode: 'no-cors' },
                                                             )
                                                         );
                                                     case 3:
@@ -10949,7 +10949,7 @@
                                                     (t.next = 3),
                                                     fetch('http://localhost:5000/task', {
                                                         method: 'POST',
-                                                        mode: 'cors',
+                                                        mode: 'no-cors',
                                                         body: JSON.stringify({
                                                             type: e.replace(' ', ''),
                                                         }),
@@ -11051,7 +11051,7 @@
                                                                     'http://localhost:5000/task/create',
                                                                     {
                                                                         method: 'POST',
-                                                                        mode: 'cors',
+                                                                        mode: 'no-cors',
                                                                         body: JSON.stringify({
                                                                             type: e.replace(
                                                                                 ' ',
