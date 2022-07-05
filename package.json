@@ -13,7 +13,7 @@
     "dev:backend": "npm run start --prefix backend",
     "install:frontend": "npm install --prefix frontend",
     "install:backend": "npm install --prefix backend",
-    "start": "run dev:backend && dev:frontend",
+    "start": "dev:backend && dev:frontend",
     "install:all": "npm install npm-run-all && run-p install:backend  install:frontend",
     "dbscript": "ts-node server/src/dbscript/populateEntries.ts",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
