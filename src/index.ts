@@ -41,7 +41,7 @@ if (process.env.NODE_ENV === 'production') {
 
 }
 
-app.listen(process.env.PORT || 3000, () => console.log("app listening on port 3000"))
+app.listen(3000 || 3000, () => console.log("app listening on port 3000"))
 
 mongoose.connect("mongodb+srv://shams:Tyuio420@eubrics.kgyzi.mongodb.net/EubricsDatabase?retryWrites=true&w=majority" || '', (err: any) => {
   if (err) {

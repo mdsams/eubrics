@@ -10412,7 +10412,7 @@
                                                                         console.log(r),
                                                                         (e.next = 4),
                                                                         fetch(
-                                                                            'http://localhost:process.env.PORT/user-log-in',
+                                                                            'http://localhost:3000/user-log-in',
                                                                             {
                                                                                 method: 'POST',
                                                                                 mode: 'cors',
@@ -10514,7 +10514,7 @@
                                                                         console.log(r),
                                                                         (e.next = 4),
                                                                         fetch(
-                                                                            'http://localhost:process.env.PORT/user-sign-in',
+                                                                            'http://localhost:3000/user-sign-in',
                                                                             {
                                                                                 method: 'POST',
                                                                                 mode: 'cors',
@@ -10601,7 +10601,7 @@
                                                             (e.prev = 0),
                                                             (e.next = 3),
                                                             fetch(
-                                                                'http://localhost:process.env.PORT/get-behaviours',
+                                                                'http://localhost:3000/get-behaviours',
                                                                 { method: 'GET', mode: 'cors' },
                                                             )
                                                         );
@@ -10947,21 +10947,18 @@
                                                 return (
                                                     (t.prev = 0),
                                                     (t.next = 3),
-                                                    fetch(
-                                                        'http://localhost:process.env.PORT/task',
-                                                        {
-                                                            method: 'POST',
-                                                            mode: 'cors',
-                                                            body: JSON.stringify({
-                                                                type: e.replace(' ', ''),
-                                                            }),
-                                                            headers: {
-                                                                'Content-Type': 'application/json',
-                                                                authorization:
-                                                                    localStorage.getItem('token'),
-                                                            },
+                                                    fetch('http://localhost:3000/task', {
+                                                        method: 'POST',
+                                                        mode: 'cors',
+                                                        body: JSON.stringify({
+                                                            type: e.replace(' ', ''),
+                                                        }),
+                                                        headers: {
+                                                            'Content-Type': 'application/json',
+                                                            authorization:
+                                                                localStorage.getItem('token'),
                                                         },
-                                                    )
+                                                    })
                                                 );
                                             case 3:
                                                 return (n = t.sent), (t.next = 6), n.json();
@@ -11051,7 +11048,7 @@
                                                                 (t.prev = 0),
                                                                 (t.next = 3),
                                                                 fetch(
-                                                                    'http://localhost:process.env.PORT/task/create',
+                                                                    'http://localhost:3000/task/create',
                                                                     {
                                                                         method: 'POST',
                                                                         mode: 'cors',
