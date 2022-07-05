@@ -15,7 +15,7 @@ app.use('/get-behaviours', nameRouter)
 app.use('/task', authentication, taskRouter)
 
 // ** MIDDLEWARE ** //
-const whitelist = ['http://localhost:7678', 'http://localhost:7678', 'https://shrouded-journey-38552.herokuapp.com']
+const whitelist = ['http://localhost:3000', 'http://localhost:3000', 'https://shrouded-journey-38552.herokuapp.com']
 const corsOptions = {
   origin: function ({ origin, callback }: any) {
     console.log("** Origin of request " + origin)
@@ -41,7 +41,7 @@ if (process.env.NODE_ENV === 'production') {
 
 }
 
-app.listen(7678, () => console.log("app listening on port 7678"))
+app.listen(process.env.PORT || 7678, () => console.log("app listening on port 3000"))
 
 mongoose.connect("mongodb+srv://shams:Tyuio420@eubrics.kgyzi.mongodb.net/EubricsDatabase?retryWrites=true&w=majority" || '', (err: any) => {
   if (err) {
